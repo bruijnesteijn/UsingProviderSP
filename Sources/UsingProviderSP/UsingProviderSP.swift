@@ -16,7 +16,7 @@ public struct UsingProviderSP: View {
     }
     
     public var body: some View {
-        Text("Hallo")
+        delegate.imageFromAssets(name: "logo")
     }
 }
 
