@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Provider
+import Combine
 
 class LocalProvider: ObservableObject {
     public var delegate: ProviderDelegate
