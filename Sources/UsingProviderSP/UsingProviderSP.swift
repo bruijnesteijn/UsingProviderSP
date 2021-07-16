@@ -13,8 +13,6 @@ public struct UsingProviderSP: View {
     
     public init(delegate: ProviderDelegate) {
         self.delegate = delegate
-        
-        _ = self.environmentObject(LocalProvider(delegate: delegate))
     }
     
     public var body: some View {
@@ -29,6 +27,7 @@ public struct UsingProviderSP: View {
             
             .navigationTitle("SwiftUI")
         }
+        .environmentObject(LocalProvider(delegate: delegate))
     }
 }
 
