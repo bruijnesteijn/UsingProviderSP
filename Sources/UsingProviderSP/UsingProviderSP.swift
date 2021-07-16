@@ -9,20 +9,18 @@ import SwiftUI
 import Provider
 
 public struct UsingProviderSP: View {
-    @EnvironmentObject var provider : LocalProvider
-    
-    //var delegate: ProviderDelegate
+    var delegate: ProviderDelegate
     
     public init(delegate: ProviderDelegate) {
-        //    self.delegate = delegate
+        self.delegate = delegate
         
-        provider.delegate = delegate
+        _ = self.environmentObject(LocalProvider(delegate: delegate))
     }
     
     public var body: some View {
         NavigationView {
             VStack {
-                provider.delegate.imageFromAssets(name: "logo")
+                delegate.imageFromAssets(name: "logo")
                 
                 NavigationLink(destination: NextView()) {
                     Text("Next view")
