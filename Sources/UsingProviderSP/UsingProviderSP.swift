@@ -11,6 +11,8 @@ import Provider
 public struct UsingProviderSP: View {
     var delegate: ProviderDelegate?
 
+    public init(){}
+    
     public var body: some View {
         Text("Hallo")
     }
