@@ -8,10 +8,10 @@
 import SwiftUI
 import Provider
 
-struct UsingProviderSP: View {
+public struct UsingProviderSP: View {
     var delegate: ProviderDelegate?
 
-    var body: some View {
+    public var body: some View {
         Text("Hallo")
     }
 }
