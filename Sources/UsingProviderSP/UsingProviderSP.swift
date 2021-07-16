@@ -11,7 +11,7 @@ import Provider
 public struct UsingProviderSP: View {
     var delegate: ProviderDelegate
 
-    public init(delegate: ProviderDelegate){
+    public init(delegate: ProviderDelegate) {
         self.delegate = delegate
     }
     
